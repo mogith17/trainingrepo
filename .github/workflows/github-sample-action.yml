@@ -7,3 +7,13 @@ jobs:
     steps:
     #display the event that trigger the worlflow
       -run: echo:"The JOB was trigrred by a ${{github.eventname}} event" 
+      
+    #Runner Information
+      -run: echo:"This job is running on the ${{ runner.os }} server hosted by github."
+      
+    #INformation about the repository and branch
+      -run: echo:"The workfow is now ready to test your code on runner."  
+      
+      -name: Checkout repository code
+       uses:actions/ckeckouts@v2
+      -run: echo:"The{{github.repository}} has been cloned to the runner"
