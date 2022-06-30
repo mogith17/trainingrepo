@@ -18,8 +18,8 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       
   Second-jobs:
-    name: secong job
-    runs-on: ubuntu-latest
+    name: second job
+    runs-on: windows-latest
     needs: Examples-actions-job
     steps:
       - run: echo"The job was automaticaly trigered by a ${{github.event_name}} event"
