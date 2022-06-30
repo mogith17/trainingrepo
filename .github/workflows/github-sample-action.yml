@@ -6,4 +6,4 @@ jobs:
     runs-on: windows-latest
     steps:
     #display the event that trigger the worlflow
-      runs: echo:"The JOB was trigrred by a ${{github.eventname}} event" 
+      -run: echo:"The JOB was trigrred by a ${{github.eventname}} event" 
