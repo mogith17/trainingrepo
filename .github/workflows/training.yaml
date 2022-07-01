@@ -19,13 +19,17 @@ jobs:
       
   Second-jobs:
     name: second job
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: Examples-actions-job
     steps:
-      - run: echo"The job was automaticaly trigered by a ${{github.event_name}} event"
-      - run: echo "the job runs on the server${{runner.os}}."
-      - uses: actions/checkout@v3
-      - name: conditionl_operator_test
-      - if: ${{ The github.event_name=="push"}}
-      - run: echo"The event is push"
-      
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+      - uses: actions/ckeckouts@v3
+      - run: echo:"The{{github.repository}} has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
