@@ -1,0 +1,17 @@
+name: githubexternaltrigger
+
+on:
+    repository_dispatch:
+     types: [run_my workflow]
+jobs:
+  Example-Action-job:
+    name: Exploring-Github-Action
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Payload field is ${{github.event.client_payload.mydata}}"
+      #display the event that trigger the action
+      - run: echo "The job was triggered by the ${{github.event_name}} event"
+      # runner information
+      - run: echo "this job is running on ${{runner.os}}"
+      #information about repository and branch
+      - run: echo" the name of your branch is ${{github.ref}} and your repository is ${{github.repository}}
