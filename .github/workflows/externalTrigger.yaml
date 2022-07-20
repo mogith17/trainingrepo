@@ -14,4 +14,4 @@ jobs:
       # runner information
       - run: echo "this job is running on ${{runner.os}}"
       #information about repository and branch
-      - run: echo" the name of your branch is ${{github.ref}} and your repository is ${{github.repository}}
+      - run: echo "the name of your branch is ${{github.ref}} and your repository is ${{github.repository}}
