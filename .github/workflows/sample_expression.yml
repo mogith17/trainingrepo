@@ -19,7 +19,7 @@ jobs:
         run: echo "Value passed from the work flow is yes"
       - name: if input is passed as yes
         if: github.event.inputs.failstep =='no'
-        run: echo "Value passed from the work flow is no
+        run: echo "Value passed from the work flow is no"
       - name: step to make the failure
         env:
          failure_step : ${{github.event.inputs.failstep}}
