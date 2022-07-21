@@ -15,10 +15,10 @@ jobs:
         if: ${{github.ref=='refs/head/main'}}
         uses: actions/checkout@v2
       - name: if input is passed as yes
-        if: github.event.inputs.failstep =="yes"
+        if: github.event.inputs.failstep =='yes'
         run: echo "Value passed from the work flow is yes"
       - name: if input is passed as yes
-        if: github.event.inputs.failstep =="no"
+        if: github.event.inputs.failstep =='no'
         run: echo "Value passed from the work flow is no
       - name: step to make the failure
         env:
