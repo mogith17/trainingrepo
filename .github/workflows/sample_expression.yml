@@ -25,7 +25,7 @@ jobs:
          failure_step : ${{github.event.inputs.failstep =='yes'}}
         run : | 
           echo "This statement runs whether step exit 0 or 1"
-          if {{$failure_step==true}}
+          if [[$failure_step==true]]
           then
             exit 1
           fi 
