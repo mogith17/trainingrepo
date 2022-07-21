@@ -22,7 +22,7 @@ jobs:
         run: echo "Value passed from the work flow is no"
       - name: step to make the failure
         env:
-         failure_step : ${{github.event.inputs.failstep}}
+         failure_step : ${{github.event.inputs.failstep =='yes'}}
         run : | 
           echo "This statement runs whether step exit 0 or 1"
           if {{$failure_step==true}}
