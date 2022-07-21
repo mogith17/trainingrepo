@@ -48,7 +48,7 @@ jobs:
     needs: first-job
     steps:
       - name: FIRST STEP IN SECOND job
-        run: echo "this the first step in the second job runs on ${{runners.os}} and triggered by ${{github.event_name}}"
+        run: echo "this the first step in the second job runs on ${{runner.os}} and triggered by ${{github.event_name}}"
 
 
 
